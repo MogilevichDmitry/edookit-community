@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>index</title>
+  <link rel="stylesheet/less" href="styles/style.less">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="main">
+      <div class="header-wrapper">
+        <h1 class="logo">Community Portal</h1>
+        <div class="header__aside">
+          <div class="header__menu">
+            <button id="menu-btn" class="menu-btn">menu</button>
+            <div id="menu-list" class="menu-list menu-list_closed">
+              <div class="menu__item menu__item-schoolpicker">
+                <div class="logo-schoolpicker">
+                  edookit schoolpicker
+                </div>
+                <a href="#" class="menu__item-btn">Enter</a>
+                <div class="menu__item-img">
+                  <img src="./images/img-schoolpicker.png" alt="schoolpicker picture">
+                </div>
+              </div>
+              <div class="menu__item menu__item-share">
+                <div class="logo-share">
+                  edookit share
+                </div>
+                <a href="#" class="menu__item-btn">Enter</a>
+                <div class="menu__item-img">
+                  <img src="./images/img-share.png" alt="share-portal picture">
+                </div>
+              </div>
+              <div class="menu__item menu__item-chat">
+                <div class="logo-chat">
+                  edookit chat
+                </div>
+                <a href="#" class="menu__item-btn btn_disabled">Coming soon</a>
+                <div class="menu__item-img">
+                  <img src="./images/img-chat.png" alt="edookit chat picture">
+                </div>
+              </div>
+              <div class="menu__item menu__item-dashboard">
+                <div class="logo-dashboard"></div>
+                <div class="menu__item-title">Dashboard</div>
+                <a href="#" class="menu__item-btn">Enter</a>
+              </div>
+              <div class="menu__item menu__item-contacts">
+                <div class="logo-contacts"></div>
+                <div class="menu__item-title">Contacts</div>
+                <a href="#" class="menu__item-btn">Enter</a>
+              </div>
+            </div>
+          </div>
+          <div class="header__notifications notifications">
+            <button class="notifications-btn">notifications</button>
+            <div class="notifications__amount">22</div>
+          </div>
+          <div class="header__profile">
+            <div class="header__username">
+              Noah Hernandez
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- header -->
+  <div class="content">
+    <div class="main">
+      <div class="content-wrapper">
+        <div class="content__people">
+          <h2 class="content__heading content__people-heading">People</h2>
+          <div class="people">
+            <div class="people__recent">
+              <h3 class="people__heading">Recent</h3>
+              <div class="people__list">
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">Lettie Simmons</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item save-btn">save</button>
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">Andre Day</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">Elizabeth Olsen</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">Eva Green</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item save-btn">save</button>
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">John Doe</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item save-btn">save</button>
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">Lewis Park</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item save-btn">save</button>
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="people__contacts">
+              <h3 class="people__heading">
+                Saved contacts
+                <span class="people__heading-icon save-colored-icon"></span>
+              </h3>
+              <div class="people__list">
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">Daisy Martin</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">Amanda Trim</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">Vera Ryzhkova</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">Lerroy Cain</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">Lucas Morton</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">James Ho</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">Lettie Simmons</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">Andre Day</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">Elizabeth Olsen</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">Eva Green</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">John Doe</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+                <div class="list__item">
+                  <div class="user__info">
+                    <div class="user__img">
+                      <img src="./images/user-default.png" alt="photo"/>
+                    </div>
+                    <div class="user__name">Lewis Park</div>
+                  </div>
+                  <div class="user__controls">
+                    <button class="user__controls-item chat-btn">chat</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- people -->
+        <div class="content__favourites">
+          <h2 class="content__heading content__favourites-heading">
+            My favourites
+            <span class="content__favourites-heading-icon heart-icon"></span>
+          </h2>
+          <button id="favourites-done-edit-btn" class="content__favourites-done-btn btn btn_done done-btn _no-visible">
+            Done
+          </button>
+          <button id="favourites-edit-btn" class="content__favourites-edit-btn btn btn_primary edit-btn">
+            Edit
+          </button>
+          <div class="schools">
+            <div class="schools__header">
+              <h3>Schools</h3>
+              <button class="drag-block-btn drag-btn _no-visible">drag</button>
+            </div>
+            <div class="schools__list">
+              <div class="list__item">
+                <div class="school__main">
+                  <div class="school__icon school-icon"></div>
+                  <div class="school__info">
+                    <span>Zakladni skola, </span>
+                    <span>Brno, Labska 27</span>
+                  </div>
+                </div>
+                <div class="list__item-controls">
+                  <div class="controls-edit _no-visible">
+                    <button class="controls__item drag-btn">drag</button>
+                    <button class="controls__item delete-btn">delete</button>
+                  </div>
+                  <div class="controls-default">
+                    <button class="controls__item open-btn_brown">open</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="materials">
+            <div class="materials__header">
+              <h3>Materials</h3>
+              <button class="drag-block-btn drag-btn _no-visible">drag</button>
+            </div>
+            <div class="materials__list">
+              <div class="list__item">
+                <div class="material__main">
+                  <div class="material__icon material-icon"></div>
+                  <div class="material__info">
+                    Zaciname se zlomky
+                  </div>
+                </div>
+                <div class="list__item-controls">
+                  <div class="controls-edit _no-visible">
+                    <button class="controls__item drag-btn">drag</button>
+                    <button class="controls__item delete-btn">delete</button>
+                  </div>
+                  <div class="controls-default">
+                    <button class="controls__item open-btn_green">open</button>
+                  </div>
+                </div>
+              </div>
+              <div class="list__item">
+                <div class="material__main">
+                  <div class="material__icon material-icon"></div>
+                  <div class="material__info">
+                    English language test
+                  </div>
+                </div>
+                <div class="list__item-controls">
+                  <div class="controls-edit _no-visible">
+                    <button class="controls__item drag-btn">drag</button>
+                    <button class="controls__item delete-btn">delete</button>
+                  </div>
+                  <div class="controls-default">
+                    <button class="controls__item open-btn_green">open</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="channels">
+            <div class="channels__header">
+              <h3>Channels</h3>
+              <button class="drag-block-btn drag-btn _no-visible">drag</button>
+            </div>
+            <div class="channels__list">
+              <div class="list__item">
+                <div class="channel__main">
+                  <div class="channel__icon channel-icon"></div>
+                  <div class="channel__info">
+                    Ucitelsky zbor ZS Labska
+                  </div>
+                </div>
+                <div class="list__item-controls">
+                  <div class="controls-edit _no-visible">
+                    <button class="controls__item drag-btn">drag</button>
+                    <button class="controls__item delete-btn">delete</button>
+                  </div>
+                  <div class="controls-default">
+                    <button class="controls__item open-btn_pink">open</button>
+                  </div>
+                </div>
+              </div>
+              <div class="list__item">
+                <div class="channel__main">
+                  <div class="channel__icon channel-icon"></div>
+                  <div class="channel__info">
+                    Trida 5A
+                  </div>
+                </div>
+                <div class="list__item-controls">
+                  <div class="controls-edit _no-visible">
+                    <button class="controls__item drag-btn">drag</button>
+                    <button class="controls__item delete-btn">delete</button>
+                  </div>
+                  <div class="controls-default">
+                    <button class="controls__item open-btn_pink">open</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- my favourites -->
+        <div class="content__profile">
+          <h2 class="content__heading content__profile-heading">My profile</h2>
+          <div class="content__profile-wrapper">
+            <div class="profile-user">
+              <h4 class="profile-user__name">Noah Hernandez</h4>
+              <div class="profile-user__img">
+                <img src="./images/user-default.png" alt="user photo"/>
+              </div>
+              <div class="profile-user__description">Zakladni Skola, Brno, Labska 27</div>
+              <a href="#" class="profile-user__settings-btn">Settings</a>
+            </div>
+            <div class="profile-apps">
+              <h3 class="profile-apps__heading">My Apps</h3>
+              <div class="profile-apps__list">
+                <a href="#" class="profile-app__item">
+                  <div class="profile-app__logo logo-schoolpicker">edookit schoolpicker</div>
+                </a>
+                <a href="#" class="profile-app__item">
+                  <div class="profile-app__logo logo-share">edookit share</div>
+                </a>
+                <a href="#" class="profile-app__item ">
+                  <div class="profile-app__logo logo-chat">edookit chat</div>
+                </a>
+              </div>
+            </div>
+            <div class="profile-accounts">
+              <h3 class="profile-accounts__heading">Connected accounts</h3>
+              <div class="profile-accounts__list">
+                <div class="account__item">
+                  <div class="account__briefly">
+                    <div class="account__main">
+                      <button id="account-expand-btn" class="account__btn expand-btn">
+                        expand
+                      </button>
+                      <div class="account__name">
+                        Dropbox
+                      </div>
+                    </div>
+                    <div class="account__count">
+                      <span class="account__count-text">2</span>
+                    </div>
+                  </div>
+                  <div id="account-expand-block" class="account__expand _no-visible">
+                    <div class="account__expand-item">
+                      <div class="account__expand-heading">Email:</div>
+                      <div class="account__expand-info">alize_bruen@schuster.com</div>
+                      <button class="account__expand-item-btn btn btn_cancel">Disconnect</button>
+                    </div>
+                    <div class="account__expand-item">
+                      <div class="account__expand-heading">Email:</div>
+                      <div class="account__expand-info">mike_cahill@imdb.com</div>
+                      <button class="account__expand-item-btn btn btn_cancel">Disconnect</button>
+                    </div>
+                    <button class="account__expand-btn add-btn">Add</button>
+                  </div>
+                </div>
+                <div class="account__item">
+                  <div class="account__briefly">
+                    <div class="account__main">
+                      <button class="account__btn expand-btn">expand</button>
+                      <div class="account__name">
+                        Microsoft OneDrive
+                      </div>
+                    </div>
+                    <div class="checked-icon"></div>
+                  </div>
+                  <div class="account__expand"></div>
+                </div>
+                <div class="account__item">
+                  <div class="account__briefly">
+                    <div class="account__main">
+                      <button class="account__btn expand-btn">expand</button>
+                      <div class="account__name">
+                        Google Drive
+                      </div>
+                    </div>
+                    <div class="checked-icon"></div>
+                  </div>
+                  <div class="account__expand"></div>
+                </div>
+                <div class="account__item">
+                  <div class="account__briefly">
+                    <div class="account__main">
+                      <button class="account__btn expand-btn">expand</button>
+                      <div class="account__name">
+                        Facebook
+                      </div>
+                    </div>
+                    <button class="btn btn_primary account__briefly-btn">Connect</button>
+                  </div>
+                  <div class="account__expand"></div>
+                </div>
+                <div class="account__item">
+                  <div class="account__briefly">
+                    <div class="account__main">
+                      <button class="account__btn expand-btn">expand</button>
+                      <div class="account__name">
+                        Edookit
+                      </div>
+                    </div>
+                    <button class="btn btn_primary account__briefly-btn">Connect</button>
+                  </div>
+                  <div class="account__expand"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- my profile -->
+      </div>
+    </div>
+  </div><!-- content -->
+</div><!-- wrapper -->
+</body>
+<script src="js/less.js"></script>
+<script src="js/common.js"></script>
+</html>

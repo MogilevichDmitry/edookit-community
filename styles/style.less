@@ -1,0 +1,775 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600';
+@import './colors.less';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  background: none;
+  &:focus {
+    outline: 1px dashed lighten(@blue, 20%);
+  }
+}
+.main {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: @greyPrimary;
+  min-height: 100vh;
+  color: @black;
+}
+.header {
+  background-color: #557ab4;
+  background: -webkit-linear-gradient( left, #5387BE, #5A569B);
+  background: linear-gradient( 90deg, #5387BE, #5A569B);
+  color: @white;
+}
+.header-wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 13.5px;
+}
+.logo {
+  font-size: 18px;
+}
+.header__aside {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 8px;
+  display: flex;
+  align-items: center;
+}
+.header__menu {
+  position: relative;
+}
+.menu-list {
+  display: flex;
+  width: 560px;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 31px;
+  right: -38px;
+  z-index: 999;
+  background: white;
+  color: black;
+  border-radius: 6px;
+  border: 1px solid @greySecondary;
+  padding: 10px 26px 15px;
+  -webkit-box-shadow: 0 2px 11px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 2px 11px -2px rgba(0,0,0,0.75);
+  box-shadow: 0 2px 11px -2px rgba(0,0,0,0.75);
+  &:before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: white;
+    position: absolute;
+    top: -5.5px;
+    right: 40px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+.menu-list_closed {
+  display: none;
+}
+.menu__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid @greySecondary;
+  border-radius: 6px;
+  margin: 0 25px 25px 0;
+  width: 150px;
+  height: 195px;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+  &:nth-last-child(1),
+  &:nth-last-child(2),
+  &:nth-last-child(3) {
+    margin-bottom: 0;
+  }
+}
+.menu__item-schoolpicker {
+  padding-top: 10px;
+  justify-content: space-between;
+  .logo-schoolpicker {
+    width: 113px;
+    height: 45px;
+    text-indent: -9999px;
+  }
+}
+.menu__item-share {
+  padding-top: 10px;
+  justify-content: space-between;
+  .logo-share {
+    width: 113px;
+    height: 45px;
+    text-indent: -9999px;
+  }
+}
+.menu__item-chat {
+  padding-top: 10px;
+  justify-content: space-between;
+  .logo-chat {
+    width: 113px;
+    height: 45px;
+    text-indent: -9999px;
+  }
+}
+.menu__item-dashboard {
+  padding-top: 15px;
+  .logo-dashboard {
+    width: 76px;
+    height: 63px;
+  }
+}
+.menu__item-contacts {
+  padding-top: 15px;
+  .logo-contacts {
+    width: 58px;
+    height: 64px;
+  }
+}
+.menu__item-btn {
+  background: @blue;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  padding: 4px 20px;
+  align-self: center;
+  text-decoration: none;
+}
+.menu__item-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 17px 0 26px;
+}
+.menu__item-img {
+  min-width: 125px;
+  max-width: 125px;
+  height: 70px;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.header__notifications {
+  margin: 0 20px 0;
+}
+.notifications {
+  position: relative;
+}
+.notifications__amount {
+  position: absolute;
+  top: -5px;
+  right: 0;
+  font-size: 10px;
+  cursor: pointer;
+  padding: 2px 3px;
+  text-align: center;
+  border-radius: 50%;
+  background: @orangeAlert;
+}
+.header__username {
+  font-size: 17.5px;
+  letter-spacing: 0.5px;
+}
+
+.content {
+  padding: 26px 0 30px;
+}
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.content__heading {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid @greySecondary;
+  background: white;
+  border-radius: 6px;
+  padding: 7px 9px;
+  margin-bottom: 6px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.list__item-controls {
+  display: flex;
+}
+.controls-edit {
+  display: flex;
+  align-items: center;
+  margin-right: -8px;
+}
+.controls-default {
+  display: flex;
+  align-items: center;
+}
+.controls__item {
+  margin-right: 5px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+/* people */
+.content__people {
+  width: 22.2%;
+}
+.content__people-heading {
+  margin-left: 67px;
+}
+.people {
+  padding-right: 20px;
+  border-right: 1px solid #979797;
+}
+.people__recent {
+  margin-bottom: 20px;
+}
+.people__heading {
+  position: relative;
+  font-size: 18px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid @grey4;
+}
+.people__heading-icon {
+  position: absolute;
+  bottom: 4px;
+  margin-left: 6px;
+}
+.user__info {
+  display: flex;
+  align-items: center;
+}
+.user__img {
+  max-width: 16px;
+  min-width: 16px;
+  height: 16px;
+  margin-right: 7px;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+.user__name {
+  font-size: 15px;
+  font-weight: 400;
+}
+.user__controls {
+  display: flex;
+  align-items: center;
+}
+.user__controls-item {
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+/* my favourites */
+.content__favourites {
+  padding: 0 18px 0 18px;
+  width: 54.2%;
+  position: relative;
+}
+.content__favourites-heading {
+  position: relative;
+}
+.content__favourites-heading-icon {
+  position: absolute;
+  bottom: 1px;
+  margin-left: 7px;
+}
+.content__favourites-done-btn {
+  position: absolute;
+  right: 18px;
+  top: 10px;
+  z-index: 1;
+}
+.content__favourites-edit-btn {
+  position: absolute;
+  right: 18px;
+  top: 40px;
+  z-index: 1;
+}
+
+/* schools */
+.schools {
+  margin-bottom: 20px;
+}
+.schools__header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  border-bottom: 2px solid @sienna;
+  position: relative;
+  margin-bottom: 10px;
+}
+.school__main {
+  display: flex;
+  align-items: center;
+}
+.school__icon {
+  margin-right: 9px;
+}
+.school__info {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* materials */
+.materials {
+  margin-bottom: 20px;
+}
+.materials__header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  border-bottom: 2px solid @paleGreen;
+  position: relative;
+  margin-bottom: 10px;
+}
+.material__main {
+  display: flex;
+  align-items: center;
+}
+.material__icon {
+  margin-right: 9px;
+}
+.material__info {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* channels */
+.channels {
+  margin-bottom: 20px;
+}
+.channels__header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  border-bottom: 2px solid @mistyRose;
+  position: relative;
+  margin-bottom: 10px;
+}
+.channel__main {
+  display: flex;
+  align-items: center;
+}
+.channel__icon {
+  margin-right: 9px;
+}
+.channel__info {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* my profile */
+.content__profile {
+  width: 23%;
+}
+.content__profile-heading {
+  text-align: center;
+  padding: 0 10px 0 22px;
+}
+.content__profile-wrapper {
+  padding: 0 10px 0 22px;
+  border-left: 1px solid #979797;
+}
+
+/* user-profile */
+.profile-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid @greySecondary;
+  border-radius: 6px;
+  padding: 10px 10px 13px;
+  background: white;
+}
+.profile-user__name {
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+.profile-user__img {
+  max-width: 80px;
+  min-width: 80px;
+  height: 80px;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+.profile-user__description {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 11px 0 16px;
+}
+.profile-user__settings-btn {
+  padding-left: 32px;
+  color: @blue;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: bold;
+  background-image: url('../images/settings.svg');
+  background-size: 26px;
+  background-repeat: no-repeat;
+}
+
+/* profile-apps */
+.profile-apps {
+  margin-top: 20px;
+}
+.profile-apps__heading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.profile-apps__list {
+  display: flex;
+  flex-direction: column;
+}
+.profile-app__item {
+  border: 1px solid @greySecondary;
+  border-radius: 6px;
+  background: white;
+  padding: 10px 63px;
+  margin-bottom: 10px;
+  transition: .2s;
+  &:hover, &:focus {
+    background-color: #D1E6F7;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.profile-app__logo {
+  width: 113px;
+  height: 45px;
+  text-indent: -9999px;
+}
+
+/* profile-accounts */
+.profile-accounts {
+  margin-top: 20px;
+}
+.profile-accounts__heading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.account__item {
+  border-radius: 6px;
+  border: 1px solid @greySecondary;
+  padding: 9px 7px;
+  margin-bottom: 10px;
+  background: white;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.account__briefly {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.account__briefly-btn {
+  font-size: 12px;
+}
+.account__main {
+  display: flex;
+  align-items: center;
+}
+.account__btn {
+  margin-right: 5px;
+}
+.account__name {
+  font-weight: 600;
+  font-size: 18px;
+}
+.account__count {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #8BBF84;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.account__count-text {
+  margin-right: 1px;
+}
+.account__expand {
+  overflow: hidden;
+}
+.account__expand-btn {
+  display: block;
+  margin: 10px auto 0;
+}
+.account__expand-item {
+  margin-top: 13px;
+  border-bottom: 1px solid @greySecondary;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+.account__expand-heading {
+  font-size: 18px;
+  font-weight: 600;
+}
+.account__expand-info {
+  font-size: 17.5px;
+  margin-bottom: 10px;
+}
+.account__expand-item-btn {
+  font-size: 12px;
+  float: right;
+}
+
+/* buttons */
+.btn {
+  border-radius: 6px;
+  color: white;
+  padding: 6px 13px;
+  font-size: 14px;
+  letter-spacing: .1px;
+}
+.btn_primary {
+  background: @blue;
+}
+.btn_cancel {
+  background: @redAlert;
+}
+.btn_done {
+  background: #8BBF84;
+}
+.btn_disabled {
+  background: @grey4;
+  cursor: default;
+}
+.menu-btn {
+  width: 21px;
+  height: 21px;
+  background: url('../images/menu.svg');
+  background-size: cover;
+  text-indent: -9999px;
+}
+.notifications-btn {
+  width: 27px;
+  height: 28px;
+  background: url('../images/notifications.svg');
+  background-size: cover;
+  text-indent: -9999px;
+}
+.save-btn {
+  width: 16px;
+  height: 16px;
+  background: url('../images/save.svg');
+  background-size: cover;
+  text-indent: -9999px;
+}
+.chat-btn {
+  width: 16px;
+  height: 15px;
+  background: url('../images/channel.svg');
+  background-size: cover;
+  text-indent: -9999px;
+}
+.edit-btn {
+  padding-left: 24px;
+  background-image: url('../images/edit.svg');
+  background-size: 11px;
+  background-repeat: no-repeat;
+  background-position: 9px center;
+}
+.done-btn {
+  padding-left: 27px;
+  background-image: url('../images/accept.svg');
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position: 9px center;
+}
+.add-btn {
+  border-radius: 6px;
+  background-color: @blue;
+  color: white;
+  background-image: url('../images/add.svg');
+  background-repeat: no-repeat;
+  padding: 6px 20px 6px 34px;
+  background-position: 10px 2px;
+  background-size: 22px;
+  transition: .2s;
+  &:hover, &:focus {
+    background-color: darken(@blue, 14%);
+  }
+}
+.drag-btn {
+  width: 30px;
+  height: 30px;
+  margin: -6px 0;
+  background: url('../images/drag.svg');
+  background-size: cover;
+  text-indent: -9999px;
+}
+.drag-block-btn {
+  width: 35px;
+  height: 35px;
+}
+.delete-btn {
+  width: 30px;
+  height: 30px;
+  margin: -6px 0;
+  background: url('../images/delete.svg');
+  background-size: cover;
+  text-indent: -9999px;
+}
+.expand-btn {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: url('../images/arrow-right.svg');
+  background-size: cover;
+  text-indent: -9999px;
+  &_active {
+    transform: rotate(90deg);
+  }
+}
+.open-btn_brown {
+  width: 13px;
+  height: 16px;
+  background: url('../images/enter_brown.svg');
+  background-size: cover;
+  text-indent: -9999px;
+}
+.open-btn_green {
+  width: 13px;
+  height: 16px;
+  background: url('../images/enter_green.svg');
+  background-size: cover;
+  text-indent: -9999px;
+}
+.open-btn_pink {
+  width: 13px;
+  height: 16px;
+  background: url('../images/enter_pink.svg');
+  background-size: cover;
+  text-indent: -9999px;
+}
+
+/* icons */
+.heart-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url('../images/like_checked.svg');
+  background-size: cover;
+}
+.save-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url('../images/save.svg');
+  background-size: cover;
+}
+.save-colored-icon {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  background: url('../images/save_colored.svg');
+  background-size: cover;
+}
+.school-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('../images/school.svg');
+  background-size: cover;
+}
+.material-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('../images/book.svg');
+  background-size: cover;
+}
+.channel-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background: url('../images/channel.svg');
+  background-size: cover;
+}
+.checked-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('../images/checked.svg');
+  background-size: cover;
+}
+
+.logo-schoolpicker {
+  background-image: url('../images/schoolpicker-logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.logo-share {
+  background-image: url('../images/share-logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.logo-chat {
+  background-image: url('../images/chat-logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.logo-dashboard {
+  background-image: url('../images/img-dashbord.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.logo-contacts {
+  background-image: url('../images/img-contacts.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Fix Mozilla bugs */
+@-moz-document url-prefix() {
+  .add-btn {
+    line-height: 1.1;
+    background-position: 5px 5px;
+  }
+}
+
+/* modificators */
+._no-visible {
+  display: none;
+}
