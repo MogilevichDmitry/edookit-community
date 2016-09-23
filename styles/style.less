@@ -148,6 +148,10 @@ button {
   padding: 4px 20px;
   align-self: center;
   text-decoration: none;
+  transition: .2s;
+  &:hover, &:focus {
+    background-color: @btnPrimaryHover;
+  }
 }
 .menu__item-title {
   font-size: 1.125em;
@@ -579,6 +583,9 @@ button {
 .btn_disabled {
   background: @btnDisabled;
   cursor: default;
+  &:hover, &:focus {
+    background: @btnDisabled;
+  }
 }
 .menu-btn {
   width: 21px;
@@ -740,28 +747,28 @@ button {
 }
 
 .logo-schoolpicker {
-  background-image: url('../images/schoolpicker-logo.svg');
+  background-image: url('../images/logos/schoolpicker-logo.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 .logo-share {
-  background-image: url('../images/share-logo.svg');
+  background-image: url('../images/logos/share-logo.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 .logo-chat {
-  background-image: url('../images/chat-logo.svg');
+  background-image: url('../images/logos/chat-logo.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 .logo-dashboard {
-  background-image: url('../images/img-dashbord.png');
+  background-image: url('../images/logos/img-dashbord.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .logo-contacts {
-  background-image: url('../images/img-contacts.png');
+  background-image: url('../images/logos/img-contacts.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
