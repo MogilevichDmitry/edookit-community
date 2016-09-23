@@ -433,13 +433,18 @@ button {
 }
 .profile-user__settings-btn {
   padding-left: 32px;
-  color: @blue;
+  color: @btnPrimary;
   text-decoration: none;
   font-size: 21px;
   font-weight: bold;
   background-image: url('../images/settings.svg');
   background-size: 26px;
   background-repeat: no-repeat;
+  transition: easy-in-out .2s;
+  &:hover, &:focus {
+    color: @btnPrimaryHover;
+    background-image: url('../images/settings_colored.svg');
+  }
 }
 
 /* profile-apps */
@@ -512,7 +517,8 @@ button {
   font-size: 1.125em;
 }
 .account__count {
-  display: inline-block;
+  font-size: 0;
+  display: flex;
   width: 20px;
   height: 20px;
   background: @success;
@@ -524,7 +530,7 @@ button {
 }
 .account__count-text {
   font-size: 16px;
-  margin-right: 1px;
+  margin: auto;
 }
 .account__expand {
   overflow: hidden;
@@ -559,15 +565,14 @@ button {
   padding: 5px 11px;
   font-size: 14px;
   letter-spacing: .1px;
+  transition: .2s;
 }
-
 @-moz-document url-prefix() {
+  /* fix mozilla btn paddings */
   .btn {
     padding: 3px 9px;
   }
 }
-
-/* fix mozilla btn paddings */
 .btn_primary {
   background: @btnPrimary;
   &:hover, &:focus {
@@ -607,6 +612,10 @@ button {
   background: url('../images/save.svg');
   background-size: cover;
   text-indent: -9999px;
+  transition: background ease-out .2s;
+  &:hover, &:focus {
+    background: url('../images/save_colored.svg');
+  }
 }
 .chat-btn {
   width: 16px;
@@ -614,6 +623,10 @@ button {
   background: url('../images/channel.svg');
   background-size: cover;
   text-indent: -9999px;
+  transition: background ease-out .2s;
+  &:hover, &:focus {
+    background: url('../images/channel_colored.svg');
+  }
 }
 .edit-btn {
   padding-left: 24px;
@@ -778,3 +791,5 @@ button {
 ._no-visible {
   display: none;
 }
+
+/* fix bugs */
