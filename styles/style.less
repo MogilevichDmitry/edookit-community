@@ -62,10 +62,10 @@ button {
   top: 31px;
   right: -38px;
   z-index: 999;
-  background: white;
-  color: black;
+  background: @white;
+  color: @black;
   border-radius: 6px;
-  border: 1px solid @greySecondary;
+  border: 1px solid @border;
   padding: 10px 26px 15px;
   -webkit-box-shadow: 0 2px 11px -2px rgba(0,0,0,0.75);
   -moz-box-shadow: 0 2px 11px -2px rgba(0,0,0,0.75);
@@ -75,7 +75,7 @@ button {
     display: block;
     width: 14px;
     height: 14px;
-    background: white;
+    background: @white;
     position: absolute;
     top: -5.5px;
     right: 40px;
@@ -90,7 +90,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid @greySecondary;
+  border: 1px solid @border;
   border-radius: 6px;
   margin: 0 25px 25px 0;
   width: 150px;
@@ -146,9 +146,9 @@ button {
   }
 }
 .menu__item-btn {
-  background: @blue;
+  background: @btnPrimary;
   border-radius: 6px;
-  color: white;
+  color: @white;
   font-weight: 600;
   padding: 4px 20px;
   align-self: center;
@@ -184,7 +184,7 @@ button {
   padding: 2px 3px;
   text-align: center;
   border-radius: 50%;
-  background: @orangeAlert;
+  background: @alert;
 }
 .header__username {
   font-size: 17.5px;
@@ -207,8 +207,8 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid @greySecondary;
-  background: white;
+  border: 1px solid @border;
+  background: @white;
   border-radius: 6px;
   padding: 7px 9px;
   margin-bottom: 6px;
@@ -244,7 +244,7 @@ button {
 }
 .people {
   padding-right: 20px;
-  border-right: 1px solid #979797;
+  border-right: 1px solid @borderDark;
 }
 .people__recent {
   margin-bottom: 20px;
@@ -254,7 +254,7 @@ button {
   font-size: 18px;
   padding-bottom: 5px;
   margin-bottom: 10px;
-  border-bottom: 2px solid @grey4;
+  border-bottom: 2px solid @borderDark;
 }
 .people__heading-icon {
   position: absolute;
@@ -307,8 +307,8 @@ button {
 }
 .content__favourites-done-btn {
   position: absolute;
-  right: 18px;
-  top: 10px;
+  right: 16px;
+  top: 2px;
   z-index: 1;
 }
 .content__favourites-edit-btn {
@@ -326,7 +326,7 @@ button {
   display: flex;
   justify-content: space-between;
   padding-bottom: 5px;
-  border-bottom: 2px solid @sienna;
+  border-bottom: 2px solid @school;
   position: relative;
   margin-bottom: 10px;
 }
@@ -350,7 +350,7 @@ button {
   display: flex;
   justify-content: space-between;
   padding-bottom: 5px;
-  border-bottom: 2px solid @paleGreen;
+  border-bottom: 2px solid @material;
   position: relative;
   margin-bottom: 10px;
 }
@@ -374,7 +374,7 @@ button {
   display: flex;
   justify-content: space-between;
   padding-bottom: 5px;
-  border-bottom: 2px solid @mistyRose;
+  border-bottom: 2px solid @channel;
   position: relative;
   margin-bottom: 10px;
 }
@@ -400,7 +400,7 @@ button {
 }
 .content__profile-wrapper {
   padding: 0 10px 0 22px;
-  border-left: 1px solid #979797;
+  border-left: 1px solid @borderDark;
 }
 
 /* user-profile */
@@ -408,10 +408,10 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid @greySecondary;
+  border: 1px solid @border;
   border-radius: 6px;
   padding: 10px 10px 13px;
-  background: white;
+  background: @white;
 }
 .profile-user__name {
   font-size: 20px;
@@ -456,14 +456,14 @@ button {
   flex-direction: column;
 }
 .profile-app__item {
-  border: 1px solid @greySecondary;
+  border: 1px solid @border;
   border-radius: 6px;
-  background: white;
+  background: @white;
   padding: 10px 63px;
   margin-bottom: 10px;
   transition: .2s;
   &:hover, &:focus {
-    background-color: #D1E6F7;
+    background-color: @whiteElemHover;
   }
   &:last-child {
     margin-bottom: 0;
@@ -485,10 +485,10 @@ button {
 }
 .account__item {
   border-radius: 6px;
-  border: 1px solid @greySecondary;
+  border: 1px solid @border;
   padding: 9px 7px;
   margin-bottom: 10px;
-  background: white;
+  background: @white;
   &:last-child {
     margin-bottom: 0;
   }
@@ -516,8 +516,8 @@ button {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: #8BBF84;
-  color: white;
+  background: @success;
+  color: @white;
   border-radius: 50%;
   text-align: center;
   font-weight: 600;
@@ -535,7 +535,7 @@ button {
 }
 .account__expand-item {
   margin-top: 13px;
-  border-bottom: 1px solid @greySecondary;
+  border-bottom: 1px solid @border;
   padding-bottom: 10px;
   overflow: hidden;
 }
@@ -555,22 +555,33 @@ button {
 /* buttons */
 .btn {
   border-radius: 6px;
-  color: white;
-  padding: 6px 13px;
+  color: @white;
+  padding: 5px 11px;
   font-size: 14px;
   letter-spacing: .1px;
 }
+
+@-moz-document url-prefix() {
+  .btn {
+    padding: 3px 9px;
+  }
+}
+
+/* fix mozilla btn paddings */
 .btn_primary {
-  background: @blue;
+  background: @btnPrimary;
+  &:hover, &:focus {
+    background-color: @btnPrimaryHover;
+  }
 }
 .btn_cancel {
-  background: @redAlert;
-}
-.btn_done {
-  background: #8BBF84;
+  background: @btnCancel;
+  &:hover, &:focus {
+    background-color: @btnCancelHover;
+  }
 }
 .btn_disabled {
-  background: @grey4;
+  background: @btnDisabled;
   cursor: default;
 }
 .menu-btn {
@@ -609,41 +620,40 @@ button {
   background-position: 9px center;
 }
 .done-btn {
-  padding-left: 27px;
+  padding-left: 26px;
   background-image: url('../images/accept.svg');
   background-size: 14px;
   background-repeat: no-repeat;
   background-position: 9px center;
 }
 .add-btn {
-  border-radius: 6px;
-  background-color: @blue;
-  color: white;
   background-image: url('../images/add.svg');
   background-repeat: no-repeat;
-  padding: 6px 20px 6px 34px;
-  background-position: 10px 2px;
+  padding-right: 20px;
+  padding-left: 34px;
+  -webkit-background-origin: content-box;
+  background-origin: content-box;
+  background-position: -24px center;
   background-size: 22px;
-  transition: .2s;
-  &:hover, &:focus {
-    background-color: darken(@blue, 14%);
-  }
 }
 .drag-btn {
-  width: 30px;
-  height: 30px;
+  width: 29px;
+  height: 29px;
   margin: -6px 0;
   background: url('../images/drag.svg');
   background-size: cover;
   text-indent: -9999px;
 }
 .drag-block-btn {
-  width: 35px;
-  height: 35px;
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  right: 0;
+  bottom: 6px;
 }
 .delete-btn {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   margin: -6px 0;
   background: url('../images/delete.svg');
   background-size: cover;
@@ -759,14 +769,6 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-/* Fix Mozilla bugs */
-@-moz-document url-prefix() {
-  .add-btn {
-    line-height: 1.1;
-    background-position: 5px 5px;
-  }
 }
 
 /* modificators */
