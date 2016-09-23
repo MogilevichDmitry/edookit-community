@@ -5,7 +5,7 @@
   var menuList = document.getElementById('menu-list');
 
   menuBtn.onclick = function() {
-    menuList.classList.toggle('menu-list_closed');
+    menuList.classList.toggle('_no-visible');
   }
 
   /* toggle account-expand */

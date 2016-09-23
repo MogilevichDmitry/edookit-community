@@ -11,9 +11,6 @@ button {
   outline: 0;
   border: 0;
   background: none;
-  &:focus {
-    outline: 1px dashed lighten(@blue, 20%);
-  }
 }
 .main {
   max-width: 1200px;
@@ -26,6 +23,7 @@ button {
   background: @greyPrimary;
   min-height: 100vh;
   color: @black;
+  font-size: 1em;
 }
 .header {
   background-color: #557ab4;
@@ -38,10 +36,10 @@ button {
   position: relative;
   align-items: center;
   justify-content: center;
-  padding: 13.5px;
+  padding: 13.5px 0;
 }
 .logo {
-  font-size: 18px;
+  font-size: 1.125em;
 }
 .header__aside {
   position: absolute;
@@ -82,9 +80,6 @@ button {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-}
-.menu-list_closed {
-  display: none;
 }
 .menu__item {
   display: flex;
@@ -155,7 +150,7 @@ button {
   text-decoration: none;
 }
 .menu__item-title {
-  font-size: 18px;
+  font-size: 1.125em;
   font-weight: 600;
   margin: 17px 0 26px;
 }
@@ -187,7 +182,7 @@ button {
   background: @alert;
 }
 .header__username {
-  font-size: 17.5px;
+  font-size: 1.094em;
   letter-spacing: 0.5px;
 }
 
@@ -199,7 +194,7 @@ button {
   justify-content: space-between;
 }
 .content__heading {
-  font-size: 28px;
+  font-size: 1.75em;
   margin-bottom: 10px;
 }
 
@@ -251,7 +246,7 @@ button {
 }
 .people__heading {
   position: relative;
-  font-size: 18px;
+  font-size: 1.125em;
   padding-bottom: 5px;
   margin-bottom: 10px;
   border-bottom: 2px solid @borderDark;
@@ -277,7 +272,7 @@ button {
   }
 }
 .user__name {
-  font-size: 15px;
+  font-size: 0.938em;
   font-weight: 400;
 }
 .user__controls {
@@ -339,7 +334,7 @@ button {
 }
 .school__info {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 0.938em;
 }
 
 /* materials */
@@ -363,7 +358,7 @@ button {
 }
 .material__info {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 0.938em;
 }
 
 /* channels */
@@ -387,7 +382,7 @@ button {
 }
 .channel__info {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 0.938em;
 }
 
 /* my profile */
@@ -414,7 +409,7 @@ button {
   background: @white;
 }
 .profile-user__name {
-  font-size: 20px;
+  font-size: 1.25em;
   margin-bottom: 7px;
 }
 .profile-user__img {
@@ -428,7 +423,7 @@ button {
   }
 }
 .profile-user__description {
-  font-size: 15px;
+  font-size: 0.938em;
   font-weight: 600;
   margin: 11px 0 16px;
 }
@@ -510,7 +505,7 @@ button {
 }
 .account__name {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125em;
 }
 .account__count {
   display: inline-block;
@@ -524,6 +519,7 @@ button {
   line-height: 1.2;
 }
 .account__count-text {
+  font-size: 16px;
   margin-right: 1px;
 }
 .account__expand {
@@ -540,11 +536,11 @@ button {
   overflow: hidden;
 }
 .account__expand-heading {
-  font-size: 18px;
+  font-size: 1.125em;
   font-weight: 600;
 }
 .account__expand-info {
-  font-size: 17.5px;
+  font-size: 1.094em;
   margin-bottom: 10px;
 }
 .account__expand-item-btn {
