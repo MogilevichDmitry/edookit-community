@@ -185,6 +185,87 @@ button {
   border-radius: 50%;
   background: @alert;
 }
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  position: absolute;
+  top: 35px;
+  right: -148px;
+  z-index: 999;
+  background: @white;
+  color: @black;
+  border-radius: 6px;
+  border: 1px solid @border;
+  -webkit-box-shadow: 0 2px 11px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 2px 11px -2px rgba(0,0,0,0.75);
+  box-shadow: 0 2px 11px -2px rgba(0,0,0,0.75);
+  &:before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: @white;
+    position: absolute;
+    top: -5.5px;
+    right: ~"calc(50% - 7px)";
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+.notifications__item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid @border;
+  z-index: 1;
+  padding: 3px 8px;
+  &:first-child {
+    border-radius: 6px 6px 0 0;
+  }
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+.notifications__item-icon {
+  margin-right: 5px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.notifications__item-body-info {
+  font-size: 15px;
+}
+.notifications__item-body-from {
+  font-weight: 600;
+  margin-left: 1px;
+}
+.notifications__more {
+  font-size: 1em;
+  text-align: center;
+  padding: 6px;
+}
+.notifications__icon_channel {
+  background-color: @channel;
+  background-image: url('../images/channel_white.svg');
+}
+.notifications__icon_school {
+  background-color: @school;
+  background-image: url('../images/school_white.svg');
+}
+.notifications__icon_material {
+  background-color: @material;
+  background-image: url('../images/channel_white.svg');
+}
+.notifications__icon_group {
+  background-color: @group;
+  background-image: url('../images/group_white.svg');
+}
+.notifcations_new {
+  background: #fef4e8;
+}
+
 .header__username {
   font-size: 1.094em;
   letter-spacing: 0.5px;
@@ -591,17 +672,16 @@ button {
     background: @btnDisabled;
   }
 }
+.btn_link {
+  color: @btnPrimary;
+  &:hover, &:focus {
+    color: @btnPrimaryHover;
+  }
+}
 .menu-btn {
   width: 21px;
   height: 21px;
   background: url('../images/menu.svg');
-  background-size: cover;
-  text-indent: -9999px;
-}
-.notifications-btn {
-  width: 27px;
-  height: 28px;
-  background: url('../images/notifications.svg');
   background-size: cover;
   text-indent: -9999px;
 }
@@ -756,6 +836,13 @@ button {
   height: 20px;
   background: url('../images/checked.svg');
   background-size: cover;
+}
+.notifications-icon {
+  width: 27px;
+  height: 28px;
+  background: url('../images/notifications.svg');
+  background-size: cover;
+  text-indent: -9999px;
 }
 
 .logo-schoolpicker {
